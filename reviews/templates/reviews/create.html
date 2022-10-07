@@ -2,6 +2,12 @@
 
 {% load django_bootstrap5 %}
 
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
 {% block content %}
 
 {% if request.resolver_match.url_name == 'create' %}

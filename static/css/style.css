@@ -3,3 +3,9 @@ h1 {
   color: rgb(253, 131, 131);
   font-size: 50px;
 }
+
+footer{
+  position : fixed;
+  bottom: 0;
+  width: 100%;
+}

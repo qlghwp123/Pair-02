@@ -5,4 +5,4 @@ class ReviewForm(forms.ModelForm):
 
     class Meta():
         model = Review
-        fields = '__all__'
+        fields = ['title', 'content', 'movie_name', 'grade']

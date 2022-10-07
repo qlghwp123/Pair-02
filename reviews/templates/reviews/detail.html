@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load django_bootstrap5 %}
+
+{% block content %}
+
+<h2>{{ data.title }}</h2>
+<h3>{{ data.movie_name }}</h3>
+<p>{{ data.grade }}</p>
+<p>{{ data.created_at }} | <span>{{ data.updated_at }}</span></p>
+<p>{{ data.content }}</p>
+
+<a href="{% url 'reviews:update' data.id %}">{% bootstrap_button button_class="btn btn-outline-success" content="수정"%}</a>
+<a href="{% url 'reviews:delete' data.id %}">{% bootstrap_button button_class="btn btn-outline-danger" content="삭제"%}</a>
+
+{% endblock %}

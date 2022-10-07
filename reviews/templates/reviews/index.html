@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="{% url 'reviews:create' %}">만들기</a>
+<hr/>
+
+{% for i in data %}
+<h2><a href="{% url 'reviews:detail' i.id %}">{{ i.title }}</a></h2>
+<h3>{{ i.movie_name }}</h3>
+<p>{{ i.grade }}</p>
+<p>{{ i.created_at }} | <span>{{ i.updated_at }}</span></p>
+<p>{{ i.content }}</p>
+<hr/>
+{% endfor %}
+
+{% endblock %}
